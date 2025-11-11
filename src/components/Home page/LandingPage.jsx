@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import Social from "./Social";
 import Modal from "./Modal";
 import ContactForm from "../ContactForm";
-import SplineHero from "./SpnineHero";
+// import SplineHero from "./SpnineHero";
 
 const LandingPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -107,7 +107,7 @@ const LandingPage = () => {
       </Modal>
 
 
-      <SplineHero/>
+      {/* <SplineHero/> */}
     </div>
   );
 };
