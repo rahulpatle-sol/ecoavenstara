@@ -64,7 +64,7 @@ const Technology = () => {
   }, []);
 
   return (
-    <section className="px-4 py-16 bg-[#101010]">
+    <section className="px-4 py-16 ">
       <div data-aos="fade-up" className="text-white text-3xl sm:text-5xl font-semibold text-center mb-12">
         Technologies We Master
       </div>

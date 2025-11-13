@@ -1,3 +1,5 @@
+// ProcessHome.jsx (UPDATED with TALLER, SOLID UI SWIPER CARDS)
+
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -42,15 +44,15 @@ const ProcessHome = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-[#101010] to-black text-white py-20 px-6 overflow-hidden">
+    <section className=" text-white py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-stretch">
         
-        {/* 🎴 Left Side - Draggable Cards */}
+        {/* 🎴 Left Side - Draggable Cards (UNCHANGED) */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="md:w-1/2 relative h-[400px] flex items-center justify-center"
+          className="md:w-1/2 relative h-[400px] flex items-center justify-center min-h-[400px]" // Added min-h
         >
           {['Our process', 'Simple, seamless', 'Streamlined.'].map((text, i) => (
             <motion.div
@@ -74,47 +76,75 @@ const ProcessHome = () => {
           ))}
         </motion.div>
 
-        {/* 📲 Right Side - Swiper Slider */}
-        <div className="md:w-1/2">
+        {/* 📲 Right Side - Swiper Slider (UPDATED UI) */}
+        <div className="md:w-1/2 flex items-center"> {/* Center the swiper vertically */}
           <Swiper
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={'auto'}
             loop={true}
-            autoplay={{ delay: 5000 }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             coverflowEffect={{
               rotate: 30,
               stretch: 0,
               depth: 100,
               modifier: 1,
-              slideShadows: true,
+              slideShadows: false, // Shadows handled by custom class
             }}
             pagination={{ clickable: true }}
             modules={[EffectCoverflow, Pagination, Autoplay]}
-            className="w-full max-w-md"
+            className="w-full max-w-md swiper-container-process"
+            // Custom CSS needed for proper height
+            style={{ 
+              height: '450px', // Increased overall height
+              paddingBottom: '50px' // Space for pagination dots
+            }}
           >
             {steps.map((step, index) => (
               <SwiperSlide
                 key={index}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-blue-500/10 transition min-w-[280px]"
+                className="swiper-slide-process"
+                // Taller height for the slide
+                style={{ 
+                    height: '350px', // Solid card height
+                    width: '320px', // Auto width adjusted for better coverflow look
+                }}
               >
                 <motion.div
-                  whileHover={{ scale: 1.05, rotate: 1 }}
+                  whileHover={{ scale: 1.02, rotate: 0 }} // Reduced hover scale/rotate
                   transition={{ type: 'spring', stiffness: 300 }}
+                  // SOLID, PREMIUM CARD STYLE
+                  className="w-full h-full bg-black border border-blue-600/50 rounded-2xl p-8 shadow-2xl transition-all duration-300 
+                             hover:shadow-[0_0_40px_rgba(37,99,235,0.4)]"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-full flex flex-col items-center justify-center text-white font-bold shadow-lg mb-4">
-                    <div className="text-sm">{step.number}</div>
-                    <div className="text-[10px] font-light">Step</div>
+                  <div className="flex items-center gap-3 mb-4">
+                    {/* Step Number Badge */}
+                    <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-xl">
+                      {step.number}
+                    </div>
+                    <div className="text-sm font-light text-blue-400">STEP</div>
                   </div>
-                  <h4 className="text-cyan-400 font-semibold text-lg mb-2">{step.title}</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
+
+                  <h4 className="text-white font-extrabold text-2xl mb-3 border-b border-white/10 pb-2">{step.title}</h4>
+                  
+                  <p className="text-gray-300 text-base leading-relaxed mt-4">
+                    {step.description}
+                  </p>
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </div>
+      
+      {/* ⚠️ NOTE: For perfect height matching, you may need to add custom CSS to your global stylesheet.
+      
+      .swiper-container-process .swiper-pagination-bullet-active {
+          background: #3b82f6 !important; // Blue-600
+      }
+      
+      */}
     </section>
   );
 };
