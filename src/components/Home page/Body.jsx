@@ -14,12 +14,14 @@ import EnquiryForm from './EnquiryForm'
 import Service_section from './Service_section'
 import WhyChooseUs from './WhyChooseUs'
 import Lenis from 'lenis'
+import ProjectTimeline from './ProjectTimeline'
 const Body = () => {
   return (
     <div>
       <LandingPage/>
       {/* <OurClients/> */}
       <Service_section/>
+      <ProjectTimeline/>
       {/* <HomeServices/> */}
       {/* <WhyChoose/> */}
       <WhyChooseUs/>
