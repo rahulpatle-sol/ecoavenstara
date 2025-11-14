@@ -122,113 +122,114 @@ const Work = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-8 py-16 overflow-hidden relative">
-      <h1 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white tracking-tight">
-        Our <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">Projects</span>
-      </h1>
+   <div className="w-full min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000] px-6 py-20 flex flex-col items-center justify-center">
+  <h1 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white tracking-tight leading-tight">
+    Our <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">Projects</span>
+  </h1>
 
-      <div
-        className="relative h-[650px] md:h-[750px] bg-gradient-to-b from-slate-900/80 to-black/90 rounded-3xl shadow-2xl overflow-hidden border border-white/10"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+  <div
+    className="relative w-full max-w-6xl h-[650px] md:h-[750px] rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(0,255,255,0.1)]"
+    onTouchStart={handleTouchStart}
+    onTouchMove={handleTouchMove}
+    onTouchEnd={handleTouchEnd}
+  >
+    <AnimatePresence initial={false} mode="wait">
+      <motion.div
+        key={projects[currentIndex].id}
+        variants={variants}
+        initial="enter"
+        animate="center"
+        exit="exit"
+        className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12"
       >
-        <AnimatePresence initial={false} mode="wait">
-          <motion.div
-            key={projects[currentIndex].id}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12"
+        <motion.div
+          className="w-full max-w-4xl overflow-hidden rounded-xl group border border-white/10 shadow-xl"
+          whileHover={{ scale: 1.015 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        >
+          <motion.img
+            src={projects[currentIndex].image}
+            alt={projects[currentIndex].title}
+            className="w-full h-auto object-cover aspect-[16/9]"
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+        </motion.div>
+
+        <motion.div
+          className="text-center mt-8 max-w-3xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-3 leading-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+              {projects[currentIndex].title}
+            </span>
+          </h2>
+          <p className="text-slate-300 mb-6 text-lg leading-relaxed">
+            {projects[currentIndex].description}
+          </p>
+          <motion.a
+            href={projects[currentIndex].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30"
           >
-            <motion.div
-              className="w-full max-w-4xl relative overflow-hidden rounded-xl group border border-white/10 shadow-lg"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200 }}
+            View Project
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              animate={{ x: [0, 4, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              <motion.img
-                src={projects[currentIndex].image}
-                alt={projects[currentIndex].title}
-                className="w-full h-auto object-cover aspect-[16/9]"
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+              <path
+                fillRule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-            </motion.div>
+            </motion.svg>
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
 
-            <motion.div
-              className="text-center mt-8 max-w-3xl"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-semibold text-white mb-3">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                  {projects[currentIndex].title}
-                </span>
-              </h2>
-              <p className="text-slate-300 mb-6 text-lg leading-relaxed">
-                {projects[currentIndex].description}
-              </p>
-              <motion.a
-                href={projects[currentIndex].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30"
-              >
-                View Project
-                <motion.svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </motion.svg>
-              </motion.a>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+    {/* Navigation Buttons */}
+    <button
+      onClick={goToPrevious}
+      className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center border border-white/20 hover:bg-white/20 transition duration-300"
+    >
+      &#8592;
+    </button>
+    <button
+      onClick={goToNext}
+      className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center border border-white/20 hover:bg-white/20 transition duration-300"
+    >
+      &#8594;
+    </button>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={goToPrevious}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center border border-white/20 hover:bg-white/20 transition duration-300"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center border border-white/20 hover:bg-white/20 transition duration-300"
-        >
-          &#8594;
-        </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-          {projects.map((_, i) => (
-            <motion.button
-              key={i}
-              onClick={() => goToSlide(i)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === currentIndex ? "bg-white w-8" : "bg-white/30 w-2.5"
-              }`}
-              whileHover={{ scale: 1.2 }}
-            />
-          ))}
-        </div>
-      </div>
+    {/* Dots */}
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      {projects.map((_, i) => (
+        <motion.button
+          key={i}
+          onClick={() => goToSlide(i)}
+          className={`h-2.5 rounded-full transition-all duration-300 ${
+            i === currentIndex ? "bg-white w-8" : "bg-white/30 w-2.5"
+          }`}
+          whileHover={{ scale: 1.2 }}
+        />
+      ))}
     </div>
+  </div>
+</div>
+
   );
 };
 
