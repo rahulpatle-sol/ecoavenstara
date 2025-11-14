@@ -23,11 +23,11 @@ const BlogSection = () => {
   }, []);
 
   if (loading) {
-    return <div className="w-full h-96 bg-gray-800 animate-pulse rounded-xl"></div>;
+    return <div className="w-full h-96 bg-black animate-pulse rounded-xl"></div>;
   }
 
   return (
-    <section className="py-20 px-4  text-white overflow-hidden">
+    <section className="py-20 px-4  text-white overflow-hidden bg-black">
       <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Our Blogs</h2>
 
       {/* Infinite Slider */}

@@ -1,4 +1,6 @@
 import React from 'react';
+import "swiper/css";
+import "swiper/css/free-mode";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Body from './components/Home page/Body';
@@ -15,6 +17,8 @@ import JobDescription from './components/JobDescription';
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar';
 import Lenis from 'lenis'
+
+
 function App() {
   return (
     <Router>
