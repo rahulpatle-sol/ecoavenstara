@@ -177,7 +177,7 @@ const About = () => {
             <div className="flex gap-3 items-start">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-semibold">A</div>
               <div>
-                <div className="font-semibold">Design Systems</div>
+                <div className="font-semibold">Design & Development Systems</div>
                 <div className="text-gray-400 text-sm">Consistent, modular design tokens and motion language.</div>
               </div>
             </div>
@@ -185,13 +185,13 @@ const About = () => {
             <div className="flex gap-3 items-start">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center font-semibold">T</div>
               <div>
-                <div className="font-semibold">Team First</div>
-                <div className="text-gray-400 text-sm">Build products that reflect team pride and culture.</div>
+                <div className="font-semibold">Client First & Team Lead</div>
+                <div className="text-gray-400 text-sm">Build products that reflect Client pride and team buid the culture.</div>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 flex gap-3">
+          <div className="mt-12 flex gap-3">
             <motion.button whileHover={{ scale: 1.04 }} className="px-5 py-3 rounded-full bg-[#1c3987]">Our Services</motion.button>
             <motion.button whileHover={{ scale: 1.04 }} className="px-5 py-3 rounded-full bg-white/6 border border-white/8">Case Studies</motion.button>
           </div>
@@ -208,7 +208,7 @@ const About = () => {
             coverflowEffect={{ rotate: 20, depth: 140, stretch: 0, modifier: 1, slideShadows: true }}
             pagination={{ clickable: true }}
             modules={[Autoplay, Pagination, EffectCoverflow]}
-            className="max-w-md mx-auto"
+            className="max-w-md mx-auto h-48"
           >
             {whoSlides.map((s, i) => (
               <SwiperSlide key={i} className="min-w-[320px]">
