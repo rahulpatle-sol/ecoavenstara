@@ -27,7 +27,7 @@ const BlogSection = () => {
   }
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-[#0f0f0f] to-black text-white overflow-hidden">
+    <section className="py-20 px-4  text-white overflow-hidden">
       <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Our Blogs</h2>
 
       {/* Infinite Slider */}
