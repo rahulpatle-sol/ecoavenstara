@@ -82,9 +82,9 @@ const services = [
         const isExpanded = service.details && isHovered
 
         const getWidth = () => {
-          if (!hoveredCard) return "flex-1" // Equal width when no hover
-          if (isExpanded) return "flex-[2]" // Expanded card takes 3x width
-          return "flex-[0.6]" // Other cards shrink to 0.5x width
+          if (!hoveredCard) return "flex-1 md:flex-3" // Equal width when no hover
+          if (isExpanded) return "flex-[4] md:flex[5]" // Expanded card takes 3x width
+          return "flex-[2]" // Other cards shrink to 0.5x width
         }
 
         return (

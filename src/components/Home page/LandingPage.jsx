@@ -69,9 +69,130 @@ const LandingPage = () => {
     }
   }, []);
 
+  // background blobs and gradients
+const FullScreenWaves = () => {
+  const wave1 = useRef(null);
+  const wave2 = useRef(null);
+  const lineWave = useRef(null);
+
+  useEffect(() => {
+    gsap.to(wave1.current, {
+      y: 25,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    gsap.to(wave2.current, {
+      y: 35,
+      duration: 6,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // Thin line wave effect
+    gsap.to(lineWave.current, {
+      y: 20,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden z-[1] opacity-[0.85]">
+
+      {/* Back gradient blur */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(43,255,214,0.25), rgba(216,255,43,0.18), rgba(147,51,234,0.25))",
+          filter: "blur(80px)",
+        }}
+      />
+
+      {/* Main Wave 1 */}
+      <svg
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 w-full h-full"
+        ref={wave1}
+      >
+        <path
+          fill="url(#grad1)"
+          fillOpacity="0.45"
+          d="M0,256L48,240C96,224,192,192,288,170.7C384,149,480,139,576,154.7C672,171,768,213,864,229.3C960,245,1056,235,1152,218.7C1248,203,1344,181,1392,170.7L1440,160V320H0Z"
+        />
+
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2ffcd6" />
+            <stop offset="50%" stopColor="#d8ff2b" />
+            <stop offset="100%" stopColor="#a855f7" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* Wave 2 (lighter) */}
+      <svg
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 w-full h-full"
+        ref={wave2}
+      >
+        <path
+          fill="url(#grad2)"
+          fillOpacity="0.25"
+          d="M0,288L60,272C120,256,240,224,360,197.3C480,171,600,149,720,149.3C840,149,960,171,1080,186.7C1200,203,1320,213,1380,218.7L1440,224V320H0Z"
+        />
+
+        <defs>
+          <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#a855f7" />
+            <stop offset="50%" stopColor="#2ffcd6" />
+            <stop offset="100%" stopColor="#d8ff2b" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* Thin Neon Line Wave (PRO Touch) */}
+      <svg
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 w-full h-full"
+        ref={lineWave}
+      >
+        <path
+          stroke="url(#lineGrad)"
+          strokeWidth="3"
+          fill="transparent"
+          d="M0,200L60,190C120,180,240,160,360,170C480,180,600,220,720,230C840,240,960,220,1080,210C1200,200,1320,200,1380,210L1440,220"
+        />
+
+        <defs>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2ffcd6" />
+            <stop offset="50%" stopColor="#d8ff2b" />
+            <stop offset="100%" stopColor="#a855f7" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+    </div>
+  );
+};
+
+
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black text-white font-['Satoshi','Inter',sans-serif']">
       {/* Gradient veil */}
+      <FullScreenWaves />
+
       <div
         className="absolute inset-0 opacity-60"
         style={{
