@@ -305,13 +305,13 @@ const About = () => {
         initial={{ rotateY: 0, rotateX: 0 }}
         whileHover={{ rotateY: -6, rotateX: 3 }}
         transition={{ type: "spring", stiffness: 120 }}
-        className="relative rounded-2xl overflow-hidden w-full max-w-xl"
+        className="relative rounded-2xl overflow-hidden w-full max-w-xl h-full shadow-2xl mt-8"
       >
         <div className="absolute inset-0 border border-white/6 rounded-2xl pointer-events-none" />
         <img
           src={office}
           alt="office"
-          className="w-full h-[420px] object-cover rounded-2xl transform will-change-transform"
+          className="w-full h-[620px] object-cover rounded-2xl transform will-change-transform"
           style={{ objectPosition: "center" }}
         />
         <div className="absolute bottom-4 left-4 bg-black/50 border border-white/6 rounded-md px-3 py-2 text-sm text-white">
@@ -322,9 +322,9 @@ const About = () => {
 
     {/* Right: mission + vision cards with timeline style */}
     <div className="space-y-6">
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-4 mt-6">
         <div className="flex-shrink-0">
-          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
+          <div className="w-14 h-14 mt-6 p-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
             M
           </div>
         </div>
@@ -333,7 +333,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white/5 backdrop-blur-md border border-white/8 rounded-2xl p-6"
+          className="bg-white/5 backdrop-blur-md border border-white/8 mt-8 rounded-2xl p-6"
         >
           <h3 className="text-2xl font-bold mb-2">Mission</h3>
           <p className="text-gray-300 leading-relaxed">
