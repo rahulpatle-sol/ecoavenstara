@@ -189,8 +189,8 @@ const ContactUs = () => {
           
           {/* Left: Contact Form Card */}
           <div className="space-y-8 lg:order-2"> {/* Form on Right for better flow */}
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-              Let’s build an <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text">awesome project</span> together!
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mt-12 p-8">
+              Let’s build an <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text ">awesome project</span> together!
             </h2>
             <p className="text-gray-300 text-lg">
               Ready to enhance your online presence? Fill out the form below or reach out directly to Ecoavenstra and experience the power of exceptional web solutions.

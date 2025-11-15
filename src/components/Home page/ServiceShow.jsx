@@ -43,6 +43,7 @@ export const services = [
     pricing: "Starting at $149 (₹12,000)",
     note: "For custom dashboards or SaaS UI, pricing varies. Contact for advanced features."
   },
+
   {
     id: 2,
     title: "Web Development",
@@ -76,7 +77,7 @@ export const services = [
       { name: "Next.js", icon: "nextjs" },
       { name: "Node.js", icon: "node" },
       { name: "Express", icon: "express" },
-      {name: "MongoDB", icon: "mongodb" },
+      { name: "MongoDB", icon: "mongodb" },
       { name: "React.js", icon: "react" },
       { name: "TailwindCSS", icon: "tailwind" },
       { name: "GSAP", icon: "gsap" },
@@ -85,6 +86,7 @@ export const services = [
     pricing: "Starting at $199 (₹16,500)",
     note: "For e-commerce or complex features, custom pricing applies."
   },
+
   {
     id: 3,
     title: "Web Solution Development",
@@ -124,6 +126,7 @@ export const services = [
     pricing: "Starting at $349 (₹29,000)",
     note: "Solutions vary based on complexity. Contact for features like analytics, CRM, automation."
   },
+
   {
     id: 4,
     title: "SaaS (Web App) Development",
@@ -161,6 +164,7 @@ export const services = [
     pricing: "Starting at $699 (₹58,000)",
     note: "Price increases with AI features, multi-tenancy, or complex workflows."
   },
+
   {
     id: 5,
     title: "Custom Web Services",
@@ -197,6 +201,7 @@ export const services = [
     pricing: "Starting at $249 (₹21,000)",
     note: "For advanced APIs or AI integration, contact for pricing."
   },
+
   {
     id: 6,
     title: "WordPress Development",
@@ -234,8 +239,91 @@ export const services = [
     ],
     pricing: "Starting at $129 (₹10,500)",
     note: "For WooCommerce or custom plugins, pricing varies."
+  },
+
+  // ⭐⭐⭐ NEW SERVICES ⭐⭐⭐
+
+  {
+    id: 7,
+    title: "Portfolio Design & Development",
+    shortDescription: "Modern, animated, high-conversion portfolio websites that showcase your personal or brand identity.",
+    whyImportant: [
+      "A strong portfolio builds credibility.",
+      "Helps you get clients, jobs, and collaborations.",
+      "Makes you stand out with a professional online presence."
+    ],
+    whatIncluded: [
+      "Custom portfolio UI design",
+      "Smooth animations & micro-interactions",
+      "Personal branding system",
+      "Project showcase sections",
+      "SEO + performance optimization"
+    ],
+    benefits: [
+      "Strong online identity",
+      "More clients & job opportunities",
+      "Fast & responsive website",
+      "Modern, premium-level animations"
+    ],
+    howWeBuild: [
+      "Understand your work & audience",
+      "Design unique branding + layout",
+      "Develop smooth animated UI",
+      "Optimize performance & SEO",
+      "Deploy on fast hosting"
+    ],
+    techStack: [
+      { name: "Next.js", icon: "nextjs" },
+      { name: "React.js", icon: "react" },
+      { name: "TailwindCSS", icon: "tailwind" },
+      { name: "Framer Motion", icon: "framer" },
+      { name: "GSAP", icon: "gsap" }
+    ],
+    pricing: "Starting at $169 (₹14,000)",
+    note: "For 3D portfolios or advanced animations, pricing may increase."
+  },
+
+  {
+    id: 8,
+    title: "Software Development",
+    shortDescription: "Full-cycle software development including planning, architecture, coding & deployment.",
+    whyImportant: [
+      "Custom-built software improves business efficiency.",
+      "Automates workflows and reduces manual work.",
+      "Scales as your business grows."
+    ],
+    whatIncluded: [
+      "Custom software architecture",
+      "Backend + frontend development",
+      "Database design",
+      "API systems",
+      "Cloud deployment & DevOps"
+    ],
+    benefits: [
+      "Reliable & scalable software",
+      "Fully automated workflows",
+      "High security & performance",
+      "Custom features built for your needs"
+    ],
+    howWeBuild: [
+      "Requirement analysis",
+      "System architecture blueprint",
+      "Feature-by-feature development",
+      "Testing & optimization",
+      "Hosting + long-term support"
+    ],
+    techStack: [
+      { name: "Node.js", icon: "node" },
+      { name: "Express", icon: "express" },
+      { name: "Next.js", icon: "nextjs" },
+      { name: "MongoDB / PostgreSQL", icon: "mongodb" },
+      { name: "AWS / GCP", icon: "aws" }
+    ],
+    pricing: "Starting at $499 (₹42,000)",
+    note: "Price depends on complexity, modules, and required integrations."
   }
 ];
+
 
 const cardGradients = [
   "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
@@ -270,13 +358,22 @@ const ServicesShowcase = () => {
     ];
   }, []);
 
-  const cardVariants = {
-    initial: { opacity: 0, y: 20, scale: 0.98 },
-    animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4 } },
-    hover: { scale: 1.03, transition: { duration: 0.2 } }
-  };
+const cardVariants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hover: { scale: 1.05, transition: { duration: 0.3 } }
+};
 
- return (
+const containerVariants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+
+return (
   <section
     ref={containerRef}
     className="min-h-screen w-full bg-black text-white px-6 md:px-12 py-16"
@@ -293,74 +390,99 @@ const ServicesShowcase = () => {
       <p className="mt-2 text-white/70">Click to see full details on the right.</p>
     </div>
 
+    {/* Responsive Grid */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      {/* LEFT: static horizontal scroll rows (no Swiper) */}
-      <div className="flex flex-col gap-8 mb-12 lg:mb-0">
-        {rows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            className="overflow-x-auto no-scrollbar"
-            style={{ WebkitOverflowScrolling: "touch" }}
-          >
-            <div className="flex gap-6 py-2">
-              {row.map((svc, i) => (
-                <motion.button
-                  key={svc.id}
-                  variants={cardVariants}
-                  initial="initial"
-                  animate="animate"
-                  whileHover="hover"
-                  onClick={() => setActive(svc)}
-                  className="min-w-[300px] md:min-w-[340px] h-[260px] rounded-2xl p-4 text-left shadow-2xl border border-white/10 relative overflow-hidden"
-                  style={{
-                    background: cardGradients[(rowIndex * 3 + i) % cardGradients.length]
-                  }}
-                >
-                  <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none rounded-2xl" />
-                  <div className="flex items-start justify-between relative">
-                    <div className="max-w-[70%]">
-                      <h3 className="text-3xl font-medium leading-tight">{svc.title}</h3>
-                      <p className="mt-1 text-sm text-white/85 line-clamp-3">
-                        {svc.shortDescription}
-                      </p>
-                    </div>
-                    <span className="text-xs bg-black/20 px-2 py-1 rounded-full">
-                      #{String(svc.id).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <div className="mt-4 flex gap-2 flex-wrap">
-                    {(svc.techStack || []).slice(0, 3).map((t) => (
-                      <span
-                        key={t.name}
-                        className="text-[11px] px-2 py-1 rounded-full bg-black/20 border border-white/10"
-                      >
-                        {t.name}
-                      </span>
-                    ))}
-                  </div>
+      
+      {/* LEFT SIDE – Services Cards */}
+      <div className="flex flex-col gap-10 mb-12">
+        {rows.map((row, rowIndex) => {
+          const reverse = rowIndex % 2 !== 0; // Alternate swipe direction
 
-                  {/* active glow */}
-                  {active.id === svc.id && (
-                    <motion.span
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 0.6 }}
-                      transition={{ duration: 0.35 }}
-                      className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full pointer-events-none"
+          return (
+            <motion.div
+              key={rowIndex}
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+            >
+              <Swiper
+                modules={[FreeMode]}
+                freeMode={true}
+                spaceBetween={20}
+                slidesPerView="auto"
+                className="w-full"
+                style={{ direction: reverse ? "rtl" : "ltr" }}
+              >
+                {row.map((svc, i) => (
+                  <SwiperSlide
+                    key={svc.id}
+                    className="!w-[85vw] sm:!w-[300px] md:!w-[340px]"
+                  >
+                    <motion.button
+                      variants={cardVariants}
+                      initial="initial"
+                      animate="animate"
+                      whileHover="hover"
+                      onClick={() => setActive(svc)}
+                      className="w-full h-[260px] rounded-2xl p-4 text-left shadow-2xl
+                                 border border-white/10 relative overflow-hidden"
                       style={{
                         background:
-                          "radial-gradient(circle at 50% 50%, rgba(34,197,94,0.45), transparent 60%)",
-                        filter: "blur(20px)"
+                          cardGradients[(rowIndex * 3 + i) % cardGradients.length]
                       }}
-                    />
-                  )}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        ))}
+                    >
+                      {/* Overlay */}
+                      <div className="absolute inset-0 opacity-[0.12] mix-blend-overlay rounded-2xl pointer-events-none" />
+
+                      {/* Header */}
+                      <div className="flex items-start justify-between">
+                        <div className="max-w-[70%]">
+                          <h3 className="text-3xl font-medium leading-tight">{svc.title}</h3>
+                          <p className="mt-1 text-sm text-white/85 line-clamp-3">
+                            {svc.shortDescription}
+                          </p>
+                        </div>
+                        <span className="text-xs bg-black/20 px-2 py-1 rounded-full">
+                          {String(svc.id).padStart(2, "0")}
+                        </span>
+                      </div>
+
+                      {/* Tech stack badges */}
+                      <div className="mt-4 flex gap-2 flex-wrap">
+                        {(svc.techStack || []).slice(0, 3).map((t) => (
+                          <span
+                            key={t.name}
+                            className="text-[11px] px-2 py-1 rounded-full bg-black/20 border border-white/10"
+                          >
+                            {t.name}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Active Glow */}
+                      {active.id === svc.id && (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 0.6 }}
+                          transition={{ duration: 0.35 }}
+                          className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full pointer-events-none"
+                          style={{
+                            background:
+                              "radial-gradient(circle at 50% 50%, rgba(34,197,94,0.45), transparent 60%)",
+                            filter: "blur(20px)"
+                          }}
+                        />
+                      )}
+                    </motion.button>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </motion.div>
+          );
+        })}
       </div>
 
-      {/* RIGHT: Detail panel */}
+      {/* RIGHT SIDE – Detail Panel */}
       <div className="stagger-in">
         <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 md:p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
           <AnimatePresence mode="wait">
@@ -371,13 +493,58 @@ const ServicesShowcase = () => {
               exit={{ opacity: 0, y: -24 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              {/* Wallet-style header */}
+              {/* Title + Price */}
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl md:text-5xl font-extrabold tracking-tight">
                     {active.title}
                   </h2>
                   <p className="mt-1 text-lime-400 font-bold text-lg">{active.pricing}</p>
+                 
+                 <details className="mt-3 cursor-pointer">
+  <summary className="text-white/70 text-sm underline underline-offset-4 hover:text-white">
+    View pricing logic
+  </summary>
+
+  <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-4 space-y-3 leading-relaxed text-white/80 text-sm">
+
+    <p>
+      Every project has its own shape — and the cost depends on the depth of thinking and the
+      systems we build behind it. Your project pricing is calculated based on:
+    </p>
+
+    <ul className="list-disc pl-5 space-y-1">
+      <li><span className="text-white font-semibold">Feature Requirements:</span>  
+        The number of screens, modules, user flows, and expected behaviours.</li>
+
+      <li><span className="text-white font-semibold">Business Logic:</span>  
+        The decision-making rules and internal systems that power the product.</li>
+
+      <li><span className="text-white font-semibold">Core Features:</span>  
+        Authentication, dashboards, payments, admin systems, automation & more.</li>
+
+      <li><span className="text-white font-semibold">Business Complexity:</span>  
+        How complex your process flow is — basic, moderate, or enterprise-grade.</li>
+
+      <li><span className="text-white font-semibold">Technical Complexity:</span>  
+        API integrations, real-time updates, security layers, scalability & performance.</li>
+
+      <li><span className="text-white font-semibold">Tech Stack:</span>  
+        Tools, frameworks and services used to build the product the right way.</li>
+
+      <li><span className="text-white font-semibold">Resources & Time:</span>  
+        Design hours, development hours, testing cycles and deployment workload.</li>
+    </ul>
+
+    <p className="pt-2 text-white/90">
+      For accurate estimation, let’s break your idea into milestones and finalize 
+      a roadmap tailored for your goals.
+      <span className="text-lime-400 font-semibold"> Book a free consultation →</span>
+    </p>
+  </div>
+</details>
+
+                  <p className="mt-1 text-lime-400 font-bold text-lg"></p>
                 </div>
                 <div className="text-right">
                   <p className="text-xs uppercase text-white/50">status</p>
@@ -391,15 +558,15 @@ const ServicesShowcase = () => {
               {/* Short description */}
               <p className="text-white/85">{active.shortDescription}</p>
 
-              {/* Grid sections */}
+              {/* GRID ROWS */}
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Section title="Why this matters" items={active.whyImportant} />
-                <Section title="What’s included" items={active.whatIncluded} />
+                <Section title="What's included" items={active.whatIncluded} />
                 <Section title="Benefits" items={active.benefits} />
                 <Section title="How we build" items={active.howWeBuild} />
               </div>
 
-              {/* Tech stack chips */}
+              {/* TECH STACK */}
               <div className="mt-8">
                 <h4 className="text-sm uppercase tracking-wide text-white/60">Tech stack</h4>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -416,13 +583,12 @@ const ServicesShowcase = () => {
 
               {/* Note */}
               <div className="mt-6 text-white/60 text-sm">{active.note}</div>
+              
 
-              {/* Action strip */}
+              {/* Action Buttons */}
               <div className="mt-8 flex flex-wrap gap-4 hover:gap-6">
-                <ActionButton label="Get quote" className="hover:bg-fuchsia-500"
-                active />
-                <ActionButton label="See examples" variant="outline" 
-                />
+                <ActionButton label="Get quote" />
+                <ActionButton label="See examples" variant="outline" />
               </div>
             </motion.div>
           </AnimatePresence>
@@ -431,6 +597,8 @@ const ServicesShowcase = () => {
     </div>
   </section>
 );
+
+
 
 };
 

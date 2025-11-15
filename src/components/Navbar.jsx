@@ -40,25 +40,10 @@ const Navbar = () => {
 
   const navItems = {
     Home: [],
-    About: [
-      { label: "Who We Are", link: "/about#who-we-are" },
-      { label: "Our Journey", link: "/about#story" },
-      { label: "Our Vision & Mission", link: "/about#vision" },
-    ],
-    Services: [
-      { label: "HR & Staffing", link: "/services#hr" },
-      { label: "IT Services", link: "/services#it" },
-      { label: "Consulting", link: "/services#consulting" },
-    ],
-    Articles: [
-      { label: "Latest News", link: "/articles#news" },
-      { label: "Blogs", link: "/articles#blogs" },
-      { label: "Case Studies", link: "/articles#case-studies" },
-    ],
-    Jobs: [
-      { label: "Open Positions", link: "/jobs#openings" },
-      { label: "Apply Now", link: "/jobs#apply" },
-    ],
+    About: [],
+    Services: [],
+    Articles: [],
+    Jobs: [],
     "Contact Us": [],
   };
 
@@ -84,35 +69,11 @@ const Navbar = () => {
             <motion.li
               key={label}
               className="relative group cursor-pointer"
-              onMouseEnter={() => setMegaMenu(label)}
-              onMouseLeave={() => setMegaMenu("")}
+              whileHover={{ scale: 1.05 }}
             >
               <Link to={`/${label.toLowerCase().replace(/ /g, "-")}`}>{label}</Link>
-
               {/* underline animation */}
               <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-
-              {/* Mega Dropdown */}
-              <AnimatePresence>
-                {megaMenu === label && navItems[label].length > 0 && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full mt-3 left-0 bg-white text-black shadow-xl p-5 rounded-xl min-w-[240px]"
-                  >
-                    {navItems[label].map((item) => (
-                      <Link
-                        key={item.label}
-                        to={item.link}
-                        className="block py-2 px-2 rounded-md hover:bg-gray-100"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </motion.li>
           ))}
 
@@ -130,49 +91,12 @@ const Navbar = () => {
 
         {/* RIGHT SECTION */}
         <div className="flex items-center gap-4">
-          {/* LOGIN / PROFILE */}
-          {isLogin ? (
-            <div
-              className="relative group"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
-              <motion.img
-                whileHover={{ scale: 1.1 }}
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
-                className="w-10 h-10 rounded-full cursor-pointer border border-white/20"
-              />
-
-              {/* Profile Dropdown */}
-              <AnimatePresence>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 top-full mt-2 z-50 bg-white rounded-lg shadow w-44"
-                  >
-                    <div className="px-4 py-3 text-sm text-gray-800">
-                      <div>{localStorage.getItem("profile_Name")}</div>
-                      <div className="font-medium truncate">
-                        {localStorage.getItem("profile_Email")}
-                      </div>
-                    </div>
-                    <button
-                      onClick={handleLogoutClick}
-                      className="block w-full px-4 py-2 text-sm text-left hover:bg-gray-200"
-                    >
-                      Log out
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ) : (
+          {/* LOGIN BUTTON ONLY DESKTOP */}
+          {!isLogin && (
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={handleLoginClick}
-              className="text-zinc-300 hover:text-green-600 border border-white/20 px-5 py-1 rounded-md"
+              className="hidden md:block text-zinc-300 hover:text-green-600 border border-white/20 px-5 py-1 rounded-md"
             >
               Log In
             </motion.button>
@@ -199,40 +123,53 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            className="fixed top-0 right-0 h-full w-72 bg-black text-white p-6 z-50 shadow-xl md:hidden"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "100%", opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="fixed top-0 right-0 h-full w-72 bg-black text-white p-6 z-50 shadow-xl md:hidden flex flex-col"
           >
+            {/* Close Icon inside menu */}
+            <div className="flex justify-end mb-6">
+              <HiX
+                onClick={() => setMobileOpen(false)}
+                className="text-white text-3xl cursor-pointer hover:text-green-500 transition"
+              />
+            </div>
+
             <h2 className="text-xl font-bold mb-6">Menu</h2>
 
             {Object.keys(navItems).map((label) => (
-              <div key={label} className="mb-4">
+              <motion.div
+                key={label}
+                whileHover={{ scale: 1.05, x: 5 }}
+                className="mb-4 relative group"
+              >
                 <Link
                   to={`/${label.toLowerCase().replace(/ /g, "-")}`}
-                  className="text-lg font-semibold"
+                  className="text-lg font-semibold transition-colors duration-300 group-hover:text-green-400"
                   onClick={() => setMobileOpen(false)}
                 >
                   {label}
                 </Link>
-
-                {/* Mobile Submenu */}
-                {navItems[label].length > 0 && (
-                  <div className="pl-4 mt-2 text-gray-300 space-y-2">
-                    {navItems[label].map((item) => (
-                      <Link
-                        key={item.label}
-                        to={item.link}
-                        className="block"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+                {/* underline animation */}
+                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+              </motion.div>
             ))}
+
+            {/* LOGIN BUTTON INSIDE MOBILE MENU */}
+            {!isLogin && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                onClick={() => {
+                  setMobileOpen(false);
+                  handleLoginClick();
+                }}
+                className="mt-6 w-full text-center text-zinc-300 hover:text-green-600 border border-white/20 px-5 py-2 rounded-md"
+              >
+                Log In
+              </motion.button>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
