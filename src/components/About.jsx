@@ -96,8 +96,8 @@ const About = () => {
 
             {/* small brand logos */}
             <div className="mt-8 flex items-center gap-6">
-              <img src={logo1} alt="logo1" className="w-28 h-auto object-contain" />
-              <img src={logo2} alt="logo2" className="w-24 h-auto object-contain opacity-90" />
+              <img src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765" alt="logo1" className="w-28 h-auto object-contain" />
+              <img src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765" alt="logo2" className="w-24 h-auto object-contain opacity-90" />
             </div>
           </motion.div>
 
@@ -309,7 +309,7 @@ const About = () => {
       >
         <div className="absolute inset-0 border border-white/6 rounded-2xl pointer-events-none" />
         <img
-          src={office}
+          src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/office-img.png?updatedAt=1763552144108"
           alt="office"
           className="w-full h-[620px] object-cover rounded-2xl transform will-change-transform"
           style={{ objectPosition: "center" }}

@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* LOGO */}
         <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
           <Link to="/">
-            <img src={Logo} alt="Ecoavenstra Logo" className="h-10 w-auto" />
+            <img src="https://www.ecoavenstra.com/assets/Ecoavenstra1_logo-BTvf_4io.png" alt="Ecoavenstra Logo" className="h-10 w-auto" />
           </Link>
         </motion.div>
 

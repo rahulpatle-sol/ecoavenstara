@@ -13,7 +13,7 @@ const Title = () => (
       transition={{ duration: 0.7 }}
       className="h-12 px-4 pt-3"
       alt="logo"
-      src={Logo}
+      src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765"
     />
   </a>
 );
@@ -137,8 +137,8 @@ const Footer = () => {
           className="sm:flex sm:items-center sm:justify-between text-sm text-gray-400"
         >
           <span>
-            © 2025-2026{" "}
-            <a href="/" className="hover:underline text-white">
+            © {new Date().getFullYear()}
+            <a href="/" className="hover:underline text-white ml-2">
               Ecoavenstra HR Infotech Pvt Ltd
             </a>
             . All Rights Reserved.

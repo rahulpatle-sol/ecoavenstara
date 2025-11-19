@@ -22,7 +22,7 @@ const Work = () => {
       title: "Ecoavenstra",
       description:
         "Ecoavenstra is a leading provider of innovative solutions in the field of environmental technology, specializing in sustainable practices and eco-friendly products.",
-      image: Ecoavenstra,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra.png?updatedAt=1763552140502",
       link: "https://www.ecoavenstra.com/",
     },
     {
@@ -30,7 +30,7 @@ const Work = () => {
       title: "LaisaLife Sciences Pvt Ltd",
       description:
         "LaisaLife Sciences Pvt Ltd is a leading provider of innovative solutions in the life sciences industry, specializing in research and development, manufacturing, and distribution of high-quality products.",
-      image: laisalife,
+      image:"https://ik.imagekit.io/y8vbhvt7s/New%20Folder/laisalife.png?updatedAt=1763552135224",
       link: "https://www.laisalife.com/",
     },
     {
@@ -38,7 +38,7 @@ const Work = () => {
       title: "VdoAds",
       description:
         "VdoAds is a platform where you can create a post and sell your product. Built with Next.js, Framer Motion, Redux, Express.js, Node.js, and Tailwind CSS.",
-      image: VdoAds,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/VdoAds.png?updatedAt=1763552130237",
       link: "https://example.com/project1",
     },
     {
@@ -46,7 +46,7 @@ const Work = () => {
       title: "EventX",
       description:
         "EventX is a modern event management platform built with React, Node.js, and Express.js, providing a seamless and user-friendly experience for event organizers and attendees.",
-      image: EventX,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/EventX.png?updatedAt=1763552120144",
       link: "https://event-management-c59000r89-rahul-barves-projects.vercel.app/",
     },
     {
@@ -54,7 +54,7 @@ const Work = () => {
       title: "MarketPlace",
       description:
         "Market Place is a full-stack e-commerce platform built with NextJS, Node.js, and Tailwind CSS. It offers a wide range of products, secure payment gateways, and a seamless shopping experience.",
-      image: MarketPlace,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Market.png?updatedAt=1763552117015",
       link: "https://market-place-five-blond.vercel.app/",
     },
     {
@@ -62,7 +62,7 @@ const Work = () => {
       title: "LuxeEstate",
       description:
         "LuxeEstate is a modern portfolio platform designed for builders to showcase their projects and achievements.",
-      image: LuxeEstate,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/RE1.png?updatedAt=1763552134225",
       link: "https://example.com/project1",
     },
     {
@@ -70,7 +70,7 @@ const Work = () => {
       title: "PrestigeEstate",
       description:
         "PrestigeEstate is a portfolio platform designed for builders to showcase their projects and achievements beautifully.",
-      image: PrestigeEstate,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/RE2.png?updatedAt=1763552130253",
       link: "https://example.com/project1",
     },
   ];

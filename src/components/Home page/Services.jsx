@@ -19,7 +19,7 @@ const services = [
       services: ["/RESPONSIVE DESIGN", "/LANDING PAGES", "/E-COMMERCE"],
       description:
         "CRAFTING MODERN, RESPONSIVE WEBSITES THAT DELIVER EXCEPTIONAL USER EXPERIENCES. FROM SLEEK LANDING PAGES TO COMPLEX E-COMMERCE PLATFORMS - EVERY PIXEL IS DESIGNED WITH PURPOSE AND PRECISION.",
-      image: webDesign,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/webDevelopment.png?updatedAt=1763552139337",
     },
   },
   {
@@ -31,7 +31,7 @@ const services = [
       services: ["/USER RESEARCH", "/WIREFRAMING", "/PROTOTYPING"],
       description:
         "DESIGNING INTUITIVE INTERFACES THAT USERS LOVE. THROUGH RESEARCH, WIREFRAMING, AND PROTOTYPING, I CREATE DIGITAL EXPERIENCES THAT ARE BOTH BEAUTIFUL AND FUNCTIONAL.",
-      image: UI_UX,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/UI_UX.png?updatedAt=1763552139697",
     },
   },
   {
@@ -43,7 +43,7 @@ const services = [
       services: ["/VISUAL DESIGN", "/SOCIAL MEDIA DESIGN", "/PRESENTATION"],
       description:
         "MY CREATIVE DESIGN IS ABOUT VISUALS THAT SPEAK FOR THE BRAND. FROM EYE-CATCHING SOCIAL MEDIA AND STYLISH PRESENTATIONS TO THOUGHTFUL VISUAL CONCEPTS - EVERYTHING IS DESIGNED TO INSPIRE, CONNECT, AND DELIVER THE BEST DIGITAL SOLUTIONS.",
-      image: creativeDesign,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/creative.png?updatedAt=1763552141729",
     },
   },
   {
@@ -55,7 +55,7 @@ const services = [
       services: ["/MOBILE APPS", "/WEB APPLICATIONS", "/DESIGN SYSTEMS"],
       description:
         "BUILDING COMPREHENSIVE PRODUCT EXPERIENCES FROM CONCEPT TO LAUNCH. SPECIALIZING IN MOBILE APPS, WEB APPLICATIONS, AND SCALABLE DESIGN SYSTEMS THAT GROW WITH YOUR BUSINESS.",
-      image: productApp,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/PRODUCT_APP.png?updatedAt=1763552140258",
     },
   },
   {
@@ -67,7 +67,7 @@ const services = [
       services: ["/FRONTEND DEVELOPMENT", "/BACKEND INTEGRATION", "/OPTIMIZATION"],
       description:
         "BRINGING DESIGNS TO LIFE WITH CLEAN, EFFICIENT CODE. FROM FRONTEND DEVELOPMENT TO BACKEND INTEGRATION AND PERFORMANCE OPTIMIZATION - DELIVERING ROBUST DIGITAL SOLUTIONS.",
-      image: development,
+      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/DEVELOPMENT.png?updatedAt=1763552140857",
     },
   },
 ]
