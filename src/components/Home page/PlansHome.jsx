@@ -12,6 +12,7 @@ const features = [
     pricing: { BASIC: '₹49,999', PREMIUM: '₹99,999', CUSTOMIZE: 'Quote Available' },
     includedInPlans: ['BASIC', 'PREMIUM', 'CUSTOMIZE'],
     offer: '🚀 Complimentary SEO & Speed Optimization Audit with PREMIUM projects.',
+    days:'Built Right. Delivered On Time – 6 Month Guarantee.'
   },
   {
     name: 'High-Converting Landing Pages',
@@ -21,6 +22,7 @@ const features = [
     pricing: { BASIC: '₹24,999', PREMIUM: '₹49,999', CUSTOMIZE: 'Quote Available' },
     includedInPlans: ['BASIC', 'PREMIUM', 'CUSTOMIZE'],
     offer: '🤝 Startup Support: Get 10% off your first campaign page.',
+       days:'Built Right. Delivered On Time – 1 Month Guarantee.'
   },
   {
     name: 'Custom Internal Web Solutions',
@@ -30,6 +32,7 @@ const features = [
     pricing: { PREMIUM: '₹1,19,999', CUSTOMIZE: 'Quote Available' },
     includedInPlans: ['PREMIUM', 'CUSTOMIZE'],
     offer: '📞 Free 1-hour strategy consultation to map out your digital requirements.',
+       days:'Built Right. Delivered On Time – 6-12  Month Guarantee.'
   },
   {
     name: 'Complex SaaS & Web Applications',
@@ -39,6 +42,7 @@ const features = [
     pricing: { PREMIUM: '₹1,49,999', CUSTOMIZE: 'Quote Available' },
     includedInPlans: ['PREMIUM', 'CUSTOMIZE'],
     offer: '✨ Early Adopter Discount: Flat ₹10,000 off on your first major app development contract.',
+       days:'Built Right. Delivered On Time – 12-18 Month Guarantee.'
   },
   {
     name: 'End-to-End eCommerce Platforms',
@@ -48,6 +52,7 @@ const features = [
     pricing: { BASIC: '₹99,999', PREMIUM: '₹1,99,999', CUSTOMIZE: 'Quote Available' },
     includedInPlans: ['BASIC', 'PREMIUM', 'CUSTOMIZE'],
     offer: '💳 Free Secure Payment Gateway Integration included.',
+       days:'Built Right. Delivered On Time – 12 Month Guarantee.'
   },
 ];
 
@@ -186,6 +191,8 @@ const PlansHome = () => {
                                     <h3 className="text-4xl font-extrabold text-white">{selectedFeature.name}</h3>
                                 </div>
                                 <p className="text-gray-300 text-lg mt-3">{selectedFeature.description}</p>
+                                 <p className="text-xl font-semibold text-lime-400">{selectedFeature.days}</p>
+
                             </header>
 
                             {/* Pricing Tiers */}

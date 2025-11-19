@@ -31,7 +31,7 @@ const services = [
       "E-commerce Solutions",
       "Performance Optimization"
     ],
-    image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 3,
@@ -208,33 +208,25 @@ const ServicesHero = () => {
   return (
     <section className="full-page-section min-h-screen w-full flex flex-col bg-black justify-center px-6 md:px-12 py-20 relative overflow-hidden ">
       <FullScreenWaves />
-      <h1 className=" text-[18vw] font-bold  absolute top-1/3 left-0 -translate-y-1/2 -z-10 leading-none tracking-tighter">
+      <h1 className=" text-[18vw] font-bold  uppercase absolute top-1/3 left-0 -translate-y-1/2 -z-10 leading-none tracking-tighter">
         services
       </h1>
-      <h2 className="hero-text text-6xl md:text-8xl font-bold max-w-5xl z-10 ml-4">
+      <h2 className="hero-text text-6xl md:text-8xl font-semi max-w-5xl z-10 ml-4 uppercase">
         we build strong products
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20 max-w-6xl z-10">
         <div className="md:col-span-1">
-          <h3 className="hero-text text-xl font-medium">We do</h3>
+          <h3 className="hero-text text-7xl font-light">We do</h3>
         </div>
         <div className="md:col-span-1 space-y-6">
           <p className="hero-text text-lg">
-            In tubik we help both large and small businesses employ design to improve
-            communication with your customers or users and increase sales of products
-            and services.
+   Grow your brand with high-impact design, social media strategy, and digital marketing.
+At VbizGro, we create visuals, websites, and campaigns that build trust, drive engagement, and generate real business growth.
           </p>
-          <p className="hero-text text-lg ">
-            With us, you can create a new visual image for your brand, develop an
-            interface for a mobile application, as well as create and launch a
-            website or a bright marketing campaign.
-          </p>
+    
         </div>
         <div className="md:col-span-1">
-          <p className="hero-text text-lg ">
-            According to the client's goals, we find ways and solutions to achieve
-            them utilizing design.
-          </p>
+       <p className="hero-text text-lg text-slate-300">Whatever your goal — visibility, conversions, or a full digital makeover — we craft the smartest solution to make it happen.</p>
         </div>
       </div>
     </section>

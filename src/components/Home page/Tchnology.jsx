@@ -12,16 +12,16 @@ const data = [
     title: 'Frontend',
     icon: <LayoutDashboard className="text-blue-400 w-6 h-6" />,
     categories: [
-      { subtitle: 'Technologies', items: 'HTML5, CSS3, Javascript, Typescript, PHP, EJS' },
-      { subtitle: 'Frameworks & Tools', items: 'Bootstrap, CodeIgniter, Laravel, ReactJS, Redux, WordPress, AntDesign, Reactstrap, React Bootstrap' }
+      { subtitle: 'Technologies', items: 'HTML5, CSS3,Tailwind css, Javascript, Typescript, EJS' },
+      { subtitle: 'Frameworks & Tools', items: 'Bootstrap, Bootstrap, ReactJS, Redux, WordPress, Reactstrap, ShadCn ' }
     ]
   },
   {
     title: 'Backend',
     icon: <Server className="text-green-400 w-6 h-6" />,
     categories: [
-      { subtitle: 'Technologies', items: 'NodeJS, Express JS, PHP, MySQL, MongoDB, PostgreSQL, GraphQL' },
-      { subtitle: 'Frameworks & Tools', items: 'Nodemailer, CORS, JWT' }
+      { subtitle: 'Technologies', items: 'NodeJS, Express JS, MongoDB, PostgreSQL, GraphQL,Supabase, Firebase' },
+      { subtitle: 'Frameworks & Tools', items: 'Nodemailer, CORS, JWT, NextJs,Microservices' }
     ]
   },
   {
@@ -36,7 +36,7 @@ const data = [
     title: 'Cloud',
     icon: <Cloud className="text-yellow-400 w-6 h-6" />,
     categories: [
-      { subtitle: 'Technologies', items: 'AWS, Azure, GCP' },
+      { subtitle: 'Technologies', items: 'AWS, Azure, GCP, Vercel, Hostinger, Netlify' },
       { subtitle: 'Libraries', items: 'Serverless, AWS CLI' }
     ]
   },
