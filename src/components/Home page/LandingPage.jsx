@@ -265,14 +265,14 @@ const FullScreenWaves = () => {
 
       {/* Hero */}
       <div ref={heroRef} className="relative z-20 flex flex-col items-center justify-center text-center min-h-[88vh] px-6">
-        <h1 className="hero-text mt-12 py-4 text-[44px] md:text-[64px] font-semibold leading-tight tracking-tight">
+        <h1 className="hero-text mt-12 py-4 text-[44px] md:text-[64px] font-[face2] leading-tight tracking-tight">
           Elevate your Digital Presence with{" "}
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
             Ecoavenstra
           </span>
           !
         </h1>
-        <p className="hero-text mt-5 text-white/70 text-lg max-w-2xl">
+        <p className="hero-text mt-5 text-white/70 text-lg font-[face1] max-w-2xl">
           We craft immersive digital experiences through stunning design, robust code, and cutting‑edge 3D visuals.
         </p>
         <div className="hero-text mt-6">

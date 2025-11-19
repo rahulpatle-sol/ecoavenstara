@@ -61,3 +61,13 @@ body {
 /* ensure duplicated track items line up */
 .marquee-row { position: relative; overflow: hidden; }
 .marquee-inner { display: flex; gap: 20px; align-items: flex-start; }
+
+
+@font-face {
+  font-family: melody;
+  src: url("./assets/rahul/fonts/BLMelody-Bold.otf");
+}
+@font-face {
+  font-family: face2;
+  src: url("./assets/rahul/fonts/NeutralFaceBold.otf");
+}
