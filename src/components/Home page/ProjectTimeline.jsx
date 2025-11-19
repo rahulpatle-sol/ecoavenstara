@@ -97,7 +97,7 @@ const ProjectTimeline = () => {
       className="w-full bg-[#050505] text-white pt-20 pb-16 overflow-hidden min-h-screen"
     >
  <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-center px-4 leading-tight">
-  The <span className="text-green-500">6-Step Process</span> Behind Every Successful Project
+  The <span className="text-green-500"> Process</span> Behind Every Successful Project
   <span className="block text-white/60 font-light text-xl md:text-2xl mt-2">
     Transparent. Predictable. Designed to deliver high-quality results every time.
   </span>
@@ -111,7 +111,7 @@ const ProjectTimeline = () => {
           {processSteps.map((step, index) => (
             <motion.div
               key={step.number}
-              drag
+              // drag
               dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
@@ -121,14 +121,14 @@ const ProjectTimeline = () => {
               className={`timeline-step w-full ${CARD_HEIGHT} flex flex-col justify-between p-6 rounded-xl transition-all duration-500 cursor-pointer 
                 ${
                   step.highlight
-                    ? 'highlight bg-green-500 text-black shadow-2xl'
+                    ? 'highlight bg-green-500 text-black shadow-2xl mb-4'
                     : 'bg-white text-black border border-white/10 hover:bg-gray-100'
                 }
               `}
             >
               <div>
                 <p className="text-3xl font-serif mb-2">{step.number}</p>
-                <h3 className="text-xl font-bold">{step.title}</h3>
+                <h3 className="text-xl  font-mono">{step.title}</h3>
                 <p className="text-sm text-gray-600 mt-1">{step.subtitle}</p>
 
                 {/* Description */}
