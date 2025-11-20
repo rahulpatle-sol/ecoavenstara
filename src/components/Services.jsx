@@ -221,7 +221,7 @@ const ServicesHero = () => {
         <div className="md:col-span-1 space-y-6">
           <p className="hero-text text-lg">
    Grow your brand with high-impact design, social media strategy, and digital marketing.
-At VbizGro, we create visuals, websites, and campaigns that build trust, drive engagement, and generate real business growth.
+At <span className="text-2xl text-center text-red-300">Ecoavenstara</span>, we create visuals, websites, and campaigns that build trust, drive engagement, and generate real business growth.
           </p>
     
         </div>
