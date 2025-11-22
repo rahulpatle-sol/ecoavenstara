@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   const navItems = {
-    Home: [],
+   
     About: [],
     Services: [],
     Articles: [],
