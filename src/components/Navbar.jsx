@@ -96,7 +96,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={handleLoginClick}
-              className="hidden md:block text-zinc-300 hover:text-green-600 border border-white/20 px-5 py-1 rounded-md"
+              className="hidden md:block text-black  hover:text-green-600 border border-white/20  bg-slate-50 px-5 py-1 rounded-md"
             >
               Log In
             </motion.button>

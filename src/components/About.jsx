@@ -265,11 +265,16 @@ const About = () => {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-2xl font-bold mb-6">Meet The Team</motion.h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[{ img: team1, name: "Mr. Venendra ", role: "Founder & Ceo" }, { img: team2, name: "Miss. Swati", role: "Design Lead Co-founder" }
+          {[
+          { img: team1, name: "Mr. Venendra", role: "Founder & CEO" },
+  { img: team2, name: "Miss. Swati", role: "Designer & Analyst" },
+  { img: team3  , name: "Rahul Patle", role: "Developer" },
 
-            ,{
-              img:team3,name:"Rahul Patle",role:"Developer"
-            }
+  // Newly added members
+  { img: team1, name: "Mrs. Neelu", role: "Director & COO" },
+  { img: team2, name: "Mrs. Khushbu", role: "Director" },
+  { img: team3, name: "Mr. Rahul Barve", role: "Remote Full Stack Developer" },
+  { img: team1, name: "Mr. Rohit", role: "Remote Business Success Manager" }
           ].map((m, i) => (
             <motion.div key={i} whileHover={{ scale: 1.03, rotateX: 2 }} className="bg-white/6 p-6 rounded-2xl flex flex-col items-center">
               <img src={m.img} alt={m.name} className="w-24 h-24 rounded-full object-cover mb-4" />
