@@ -14,8 +14,8 @@ import { RiLightbulbFlashLine, RiBrushLine, RiHammerLine } from "react-icons/ri"
 
 import bgimage from "/images/why-us.jpg"
 
-import team1 from "/images/team1.png";
-import team2 from "/images/team2.png";
+import team1 from "/images/team1f.png";
+import team2 from "/images/team2g.png";
 import team3 from    "/images/team1.png"
 
 import WhyChooseUs from "./Home page/WhyChooseUs";
