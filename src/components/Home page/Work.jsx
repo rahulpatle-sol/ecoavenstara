@@ -73,6 +73,34 @@ const Work = () => {
       image: "/images/RE2.png",
       link: "https://example.com/project1",
     },
+{
+  id: 8,
+  title: "VbizGro – Digital Growth Agency",
+  description:
+    "VbizGro is a digital marketing powerhouse delivering ROI-driven ads, brand identity, social media management, and creative campaigns for businesses looking to scale fast.",
+  image: "/images/vbizgro.png",
+  link: "https://vbizgro.com",
+},
+{
+  id: 9,
+  title: "JobBoard – Talent Recruitment Hub",
+  description:
+    "JobBosard is a modern recruitment platform connecting top-tier talent with companies through AI-powered job matching, smart screening, and talent acquisition tools.",
+  image: "/images/jobboard.png",
+  link: "https://ecojobboard.vercel.app/",
+}
+,
+{
+  id: 10,
+  title: "Creative Studio – Design & Branding Lab",
+  description:
+    "Creative Studio is your premium design hub offering branding, graphics, UI/UX, video editing, and visual storytelling to help brands look iconic and unforgettable.",
+  image: "/images/creativestudio.png",
+  link: "https://creative-digital-solution.vercel.app/",
+}
+
+
+
   ];
 
   useEffect(() => {
