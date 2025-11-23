@@ -14,8 +14,9 @@ import { RiLightbulbFlashLine, RiBrushLine, RiHammerLine } from "react-icons/ri"
 
 import bgimage from "/images/why-us.jpg"
 
-import team1 from "/images/team1.jpg";
-import team2 from "/images/team1.jpg";
+import team1 from "/images/team1.png";
+import team2 from "/images/team2.png";
+import team3 from    "/images/team1.png"
 
 import WhyChooseUs from "./Home page/WhyChooseUs";
 import Service_section from "./Home page/Service_section";
@@ -264,7 +265,12 @@ const About = () => {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-2xl font-bold mb-6">Meet The Team</motion.h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[{ img: team1, name: "Rahul P", role: "Founder" }, { img: team2, name: "Anita S", role: "Design Lead" }].map((m, i) => (
+          {[{ img: team1, name: "Mr. Venendra ", role: "Founder & Ceo" }, { img: team2, name: "Miss. Swati", role: "Design Lead Co-founder" }
+
+            ,{
+              img:team3,name:"Rahul Patle",role:"Developer"
+            }
+          ].map((m, i) => (
             <motion.div key={i} whileHover={{ scale: 1.03, rotateX: 2 }} className="bg-white/6 p-6 rounded-2xl flex flex-col items-center">
               <img src={m.img} alt={m.name} className="w-24 h-24 rounded-full object-cover mb-4" />
               <div className="font-semibold">{m.name}</div>
@@ -337,10 +343,10 @@ const About = () => {
           <p className="text-gray-300 leading-relaxed">
             Help businesses craft digital products that are delightful, performant, and measurable. We combine product strategy, elegant design systems, and resilient engineering to deliver outcomes that scale.
           </p>
-          {/* <div className="mt-4 flex gap-3">
+          <div className="mt-4 flex gap-3">
             <button className="px-4 py-2 rounded-full bg-[#1c3987] text-white text-sm">Our Process</button>
             <button className="px-4 py-2 rounded-full bg-white/6 text-white text-sm border border-white/8">Case Studies</button>
-          </div> */}
+          </div>
         </motion.div>
       </div>
 
