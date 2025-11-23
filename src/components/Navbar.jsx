@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../assets/Ecoavenstra1_logo.png";
+
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
    
     About: [],
     Services: [],
-    Articles: [],
+
     Jobs: [],
     "Contact Us": [],
   };
@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* LOGO */}
         <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
           <Link to="/">
-            <img src="https://www.ecoavenstra.com/assets/Ecoavenstra1_logo-BTvf_4io.png" alt="Ecoavenstra Logo" className="h-10 w-auto" />
+            <img src="/images/logo.png" alt="Ecoavenstra Logo" className="h-10 w-auto" />
           </Link>
         </motion.div>
 

@@ -17,6 +17,7 @@ import JobDescription from './components/JobDescription';
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar';
 import Lenis from 'lenis'
+import ProcessHome from './components/Home page/ProcessHome';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path='/employerform' element={<EmployerForm />} />
         <Route path="/blog/article/:id" element={<ReadMorePage />} />
+              <Route path="/process" element={<ProcessHome />} />
       </Routes>
       <Footer />
     </Router>

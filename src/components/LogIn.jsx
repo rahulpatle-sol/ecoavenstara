@@ -241,8 +241,8 @@ const ToggleSignIn = () => {
   };
 
   const cardData = [
-    { id: 1, text: "Own your power", bg: "bg-gradient-to-br from-lime-300 to-green-400", direction: 1 },
-    { id: 2, text: "Building trust in blockchain technology", bg: "bg-gradient-to-br from-cyan-400 to-blue-500", direction: -1 },
+    { id: 1, text: "Bring your Digital identity with  Ecoavenstara  ", bg: "bg-gradient-to-br from-lime-300 to-green-400", direction: 1 },
+    { id: 2, text: "Building trust in seamless technology", bg: "bg-gradient-to-br from-cyan-400 to-blue-500", direction: -1 },
     { id: 3, text: "Total Care. Total Different.", bg: "bg-gradient-to-br from-purple-500 to-pink-500", direction: 1 },
     { id: 4, text: "Logo + Identity", bg: "bg-gradient-to-br from-yellow-400 to-orange-500", direction: -1 },
   ];
@@ -547,7 +547,7 @@ const ToggleSignIn = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, type: "spring" }}
           >
-            AVENSTRA
+          <img src="/images/logo.png" alt="" />
           </motion.div>
 
           {/* Animated Card Grid */}

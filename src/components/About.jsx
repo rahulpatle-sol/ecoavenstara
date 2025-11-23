@@ -12,12 +12,10 @@ import "swiper/css/effect-coverflow";
 
 import { RiLightbulbFlashLine, RiBrushLine, RiHammerLine } from "react-icons/ri";
 
-import bgimage from "/src/assets/bg-about.png";
-import logo1 from "/src/assets/Ecoavenstra_logo.png";
-import logo2 from "/src/assets/Ecoavenstra1_logo.png";
-import office from "/src/assets/office-img.png";
-import team1 from "/src/assets/team1.jpg";
-import team2 from "/src/assets/team1.jpg";
+import bgimage from "/images/why-us.jpg"
+
+import team1 from "/images/team1.jpg";
+import team2 from "/images/team1.jpg";
 
 import WhyChooseUs from "./Home page/WhyChooseUs";
 import Service_section from "./Home page/Service_section";
@@ -90,14 +88,14 @@ const About = () => {
             </p>
 
             <div className="mt-8 flex gap-4">
-              <motion.a whileHover={{ scale: 1.03 }} href="#contact" className="bg-[#1c3987] px-6 py-3 rounded-full text-white font-medium shadow-lg">Get Consultation</motion.a>
-              <motion.button whileHover={{ scale: 1.03 }} className="bg-white/6 px-6 py-3 rounded-full text-white border border-white/8">Our Work</motion.button>
+              <motion.a whileHover={{ scale: 1.03 }} href="/contact-us" className="bg-[#1c3987] px-6 py-3 rounded-full text-white font-medium shadow-lg">Get Consultation</motion.a>
+              <motion.a whileHover={{ scale: 1.03 }} href="/services" className="bg-white/6 px-6 py-3 rounded-full text-white border border-white/8">Our Work</motion.a>
             </div>
 
             {/* small brand logos */}
             <div className="mt-8 flex items-center gap-6">
-              <img src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765" alt="logo1" className="w-28 h-auto object-contain" />
-              <img src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765" alt="logo2" className="w-24 h-auto object-contain opacity-90" />
+              <img src="/images/logo.png" alt="logo1" className="w-28 h-auto object-contain" />
+              <img src="/images/logo.png" alt="logo2" className="w-24 h-auto object-contain opacity-90" />
             </div>
           </motion.div>
 
@@ -309,7 +307,7 @@ const About = () => {
       >
         <div className="absolute inset-0 border border-white/6 rounded-2xl pointer-events-none" />
         <img
-          src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/office-img.png?updatedAt=1763552144108"
+          src="/images/office-img.png"
           alt="office"
           className="w-full h-[620px] object-cover rounded-2xl transform will-change-transform"
           style={{ objectPosition: "center" }}
@@ -339,10 +337,10 @@ const About = () => {
           <p className="text-gray-300 leading-relaxed">
             Help businesses craft digital products that are delightful, performant, and measurable. We combine product strategy, elegant design systems, and resilient engineering to deliver outcomes that scale.
           </p>
-          <div className="mt-4 flex gap-3">
+          {/* <div className="mt-4 flex gap-3">
             <button className="px-4 py-2 rounded-full bg-[#1c3987] text-white text-sm">Our Process</button>
             <button className="px-4 py-2 rounded-full bg-white/6 text-white text-sm border border-white/8">Case Studies</button>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 

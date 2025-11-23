@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Ecoavenstra1_logo.png";
-import GridBackground from "../assets/rahul/why-us.jpg";
+
+import GridBackground from "/images/why-us.jpg";
 import { CiLocationOn, CiPhone, CiMail } from "react-icons/ci";
 import { motion } from "framer-motion";
 
@@ -13,7 +13,7 @@ const Title = () => (
       transition={{ duration: 0.7 }}
       className="h-12 px-4 pt-3"
       alt="logo"
-      src="https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra1_logo.png?updatedAt=1763552114765"
+      src="/images/logo.png"
     />
   </a>
 );

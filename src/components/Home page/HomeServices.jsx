@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import service1 from "../../assets/service1.png";
-import eCommerceDev from "../../assets/eCommerce-Development.png";
-import digital from "../../assets/Digital-Marketing-Services.png";
-import UiUx from "../../assets/Designing-Services.png";
-import HireDevelopers from "../../assets/Hire-Developers.png";
+import eCommerceDev from "/images/eCommerce-Development.png";
+import digital from "/images/Digital-Marketing-Services.png";
+import UiUx from "/images/Designing-Services.png";
+import HireDevelopers from "/images/Hire-Developers.png";
 import { useNavigate } from 'react-router-dom';
 
 // Static icons map

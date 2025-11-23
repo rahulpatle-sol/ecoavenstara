@@ -27,7 +27,7 @@ const BlogSection = () => {
   }
 
   return (
-    <section className="py-20 px-4  text-white overflow-hidden bg-black">
+    <section className="py-80 px-4  text-white overflow-hidden bg-black">
       <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Our Blogs</h2>
 
       {/* Infinite Slider */}

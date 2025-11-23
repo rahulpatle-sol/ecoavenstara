@@ -1,9 +1,9 @@
 import React from 'react';
-import client1 from "../../assets/company 1.png";
-import client2 from "../../assets/company 2.png";
-import client3 from "../../assets/company 3.png";
-import client4 from "../../assets/company 4.png";
-import client5 from "../../assets/Ecoavenstra_logo.png";
+import client1 from "/images/company 1.png";
+import client2 from "/images/company 2.png";
+import client3 from "/images/company 3.png";
+import client4 from "/images/company 4.png";
+import client5 from "/images/Ecoavenstra_logo.png";
 import "./OurClients.css";
 
 const OurClients = () => {

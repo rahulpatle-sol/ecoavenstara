@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import "./Spinner.css";
 import { BsBuilding } from "react-icons/bs";
 import { FaFilter, FaTimes } from "react-icons/fa";
-import job1 from "/src/assets/1st image.png";
-import job2 from "/src/assets/2ed image.webp";
-import job3 from "/src/assets/3ed image.webp";
+import job1 from "/images/1st image.png";
+import job2 from "/images/2ed image.webp";
+import job3 from "/images/3ed image.webp";
 
 const categories = [
   {

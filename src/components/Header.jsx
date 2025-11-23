@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '../assets/Ecoavenstra1_logo.png';
+
 import Navbar from './Navbar';
 
 const Title = () => (

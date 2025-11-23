@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import AddBazaar from "/src/assets/AddBazaar.png";
-import MarketPlace from "/src/assets/Market.png";
-import EventX from "/src/assets/EventX.png";
-import LuxeEstate from "/src/assets/RE1.png";
-import PrestigeEstate from "/src/assets/RE2.png";
-import laisalife from "/src/assets/laisalife.png";
-import VdoAds from "/src/assets/VdoAds.png";
-import Ecoavenstra from "/src/assets/image.png";
+// import AddBazaar from "/src/assets/AddBazaar.png";
+// import MarketPlace from "/src/assets/Market.png";
+// import EventX from "/src/assets/EventX.png";
+// import LuxeEstate from "/src/assets/RE1.png";
+// import PrestigeEstate from "/src/assets/RE2.png";
+// import laisalife from "/src/assets/laisalife.png";
+// import VdoAds from "/src/assets/VdoAds.png";
+// import Ecoavenstra from "/src/assets/image.png";
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,23 +22,23 @@ const Work = () => {
       title: "Ecoavenstra",
       description:
         "Ecoavenstra is a leading provider of innovative solutions in the field of environmental technology, specializing in sustainable practices and eco-friendly products.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Ecoavenstra.png?updatedAt=1763552140502",
-      link: "https://www.ecoavenstra.com/",
+      image: "/images/ecomain.png",
+      link: "https://www.ecoavenstra.com",
     },
     {
       id: 1,
       title: "LaisaLife Sciences Pvt Ltd",
       description:
         "LaisaLife Sciences Pvt Ltd is a leading provider of innovative solutions in the life sciences industry, specializing in research and development, manufacturing, and distribution of high-quality products.",
-      image:"https://ik.imagekit.io/y8vbhvt7s/New%20Folder/laisalife.png?updatedAt=1763552135224",
-      link: "https://www.laisalife.com/",
+      image:"/images/laisalife.png",
+      link: "https://www.laisalife.com",
     },
     {
       id: 2,
       title: "VdoAds",
       description:
         "VdoAds is a platform where you can create a post and sell your product. Built with Next.js, Framer Motion, Redux, Express.js, Node.js, and Tailwind CSS.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/VdoAds.png?updatedAt=1763552130237",
+      image: "/images/VdoAds.png",
       link: "https://example.com/project1",
     },
     {
@@ -46,7 +46,7 @@ const Work = () => {
       title: "EventX",
       description:
         "EventX is a modern event management platform built with React, Node.js, and Express.js, providing a seamless and user-friendly experience for event organizers and attendees.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/EventX.png?updatedAt=1763552120144",
+      image: "/images/EventX.png",
       link: "https://event-management-c59000r89-rahul-barves-projects.vercel.app/",
     },
     {
@@ -54,15 +54,15 @@ const Work = () => {
       title: "MarketPlace",
       description:
         "Market Place is a full-stack e-commerce platform built with NextJS, Node.js, and Tailwind CSS. It offers a wide range of products, secure payment gateways, and a seamless shopping experience.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/Market.png?updatedAt=1763552117015",
-      link: "https://market-place-five-blond.vercel.app/",
+      image: "/images/Market.png",
+      link: "https://market-place-five-blond.vercel.app",
     },
     {
       id: 6,
       title: "LuxeEstate",
       description:
         "LuxeEstate is a modern portfolio platform designed for builders to showcase their projects and achievements.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/RE1.png?updatedAt=1763552134225",
+      image: "/images/RE1.png",
       link: "https://example.com/project1",
     },
     {
@@ -70,7 +70,7 @@ const Work = () => {
       title: "PrestigeEstate",
       description:
         "PrestigeEstate is a portfolio platform designed for builders to showcase their projects and achievements beautifully.",
-      image: "https://ik.imagekit.io/y8vbhvt7s/New%20Folder/RE2.png?updatedAt=1763552130253",
+      image: "/images/RE2.png",
       link: "https://example.com/project1",
     },
   ];

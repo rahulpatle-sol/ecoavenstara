@@ -286,7 +286,7 @@ const FullScreenWaves = () => {
             Get Started
           </button>
           <a
-            href="#portfolio"
+            href="/services"
             className="px-8 py-3 border border-white/30 rounded-full text-lg font-semibold hover:bg-white/10 transition"
           >
             Explore

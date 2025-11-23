@@ -3,8 +3,8 @@ import {
   Users, Target, Palette, Zap, PenTool, Search,
   TrendingUp, Cpu, HeadphonesIcon, DollarSign
 } from "lucide-react";
-import WhyChoose from "../../assets/whyChoose.jpg";
-import GridBackground from "../../assets/rahul/why-us.jpg";
+import WhyChoose from "/images/whyChoose.jpg";
+import GridBackground from "/images/why-us.jpg";
 
 const features = [
   { icon: Users, title: "Experience Developers", description: "Our seasoned team delivers exceptional solutions." },

@@ -65,9 +65,9 @@ body {
 
 @font-face {
   font-family: melody;
-  src: url("./assets/rahul/fonts/BLMelody-Bold.otf");
+  src: url("/fonts/BLMelody-Bold.otf");
 }
 @font-face {
   font-family: face2;
-  src: url("./assets/rahul/fonts/NeutralFaceBold.otf");
+  src: url("/fonts/NeutralFaceBold.otf");
 }
